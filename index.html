@@ -199,7 +199,6 @@ iptables -N PING_FILTER
 iptables -A INPUT -p icmp --icmp-type echo-request -m recent --name pingtrack --update --seconds 86400 --rttl -j DROP
 iptables -A INPUT -p icmp --icmp-type echo-request -m recent --name pingtrack --set -j ACCEPT
 iptables -A INPUT -p icmp --icmp-type echo-request -m recent --name pingtrack --update --seconds 86400 --rttl -j DROP
-
 	</code></pre>
 	<p>This rule lasts an entire day meaning to get past this the delay between each ping would have to be longer than a day. The only way to get around this delay would require the attacker to expand the c2 infrastrtucture and the code of pingshell itselff to accept pings from multiple addresses to encode the same bits. If address rotations were implemented the firewall and IDS rules would be rendered obsolete. Below I have a video of my findings as well as the command I sent. Because this is a proof of concept I will be using a simple payload to display the windows version and then close it. However considering direct access to the run bar, it is possible to do nearly whatever you want including downloads, or execution of other files. As you can see in the image, I send the command "winver" and on the right screen of the video you can see the binary buffer accumulating. When the binary buffer has the full binary of the command you can see the run dialog trigger then type the plaintext of the command and execute. I have left the debug messages in my code so you can visually see each packet coming in and the binary buffer accumulating  </p>
 	<div class="vidcontainer">
