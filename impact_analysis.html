@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eliza Hofer">
+    <meta name="description" content="PingShell potential impacts and implications">
+    <meta name="keywords" content="malware, cybersecurity, proof of concept, ICMP, Reverse Shell, impact, analysis, python, obfuscation">
+    <title>PingShell: Potential and Impact Analysis</title>
+    <link rel="stylesheet" href="styles/style2.css">
+</head>
+<body>
+    <header>
+        <h1>PingShell: Vectors, Payloads, Botnetting, Risks, and Potential</h1>
+    </header>
+    <main>
+	    <h2>Vectors: How pingshell can get onto someone's computer</h2>
+	    <p>All we have so far is a bunch of python code that anyone could read and identify as malicious. How could someone possibly get the listener running on a target machine without direct access to it? well there are several potential ways to do this, but it would require some level of social engineering to get a  potential user to install and run either the infector or the process itself, but how do we package the codein order to make it hard to detect at first glance? Well there is a current well known issue with github rendering that allows you to hide the python code off screen. This technique was not discovered by me, but is well known and common problem with open source code from github. The technique abuses the way python interprets the ";" and "whitespace" to put multiple lines of code off screen. all an attacker would have to do is use a semicolon after one line, and then add a bunch of witespace and write the malicious code far outside of the normal display margin. This means someone can write code on github that looks legitimate, but when executed, it will run the unseen code, and successfully establishes a shell. This vector is dangerous and is one of the many reasons you should read and check code installed from open source repositories. Many people use github open source software for all kinds of things, including autoclickers, aimbots, and even development utilities, which provides a huge pool of potential victims.</p>
+    </main>
+</body>

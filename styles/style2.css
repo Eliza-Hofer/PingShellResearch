@@ -1,0 +1,35 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        line-height: 1.6;
+}
+header, footer {
+        background: #ff8afd;
+        color: black;
+        text-align: center;
+        padding: 10px;
+}
+main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+}
+section {
+        margin-bottom: 20px;
+}
+pre {
+        background: #945a93;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+}
+code {
+	font-family: monospace;
+}
+.vidcontainer {
+	display: grid;
+	place-items: center;
+	height: 75vh;
+}
+
