@@ -36,4 +36,6 @@ code {
 	place-items: center;
 	height: 75vh;
 }
-
+table, th, td {
+  border: 1px solid;
+}
