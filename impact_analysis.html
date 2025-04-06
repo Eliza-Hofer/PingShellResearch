@@ -11,11 +11,11 @@
 </head>
 <body>
     <header>
-        <h1>PingShell: Vectors, Payloads, Botnetting, Risks, and Potential</h1>
+        <h1>PingShell's Killchain</h1>
     </header>
     <main>
-	    <h2>Vectors: How pingshell can get onto someone's computer</h2>
-	    <p>All we have so far is a bunch of python code that anyone could read and identify as malicious. How could someone possibly get the listener running on a target machine without direct access to it? well there are several potential ways to do this, but it would require some level of social engineering to get a  potential user to install and run either the infector or the process itself, but how do we package the codein order to make it hard to detect at first glance? Well there is a current well known issue with github rendering that allows you to hide the python code off screen. This technique was not discovered by me, but is well known and common problem with open source code from github. The technique abuses the way python interprets the ";" and "whitespace" to put multiple lines of code off screen. all an attacker would have to do is use a semicolon after one line, and then add a bunch of witespace and write the malicious code far outside of the normal display margin. This means someone can write code on github that looks legitimate, but when executed, it will run the unseen code, and successfully establishes a shell. This vector is dangerous and is one of the many reasons you should read and check code installed from open source repositories. Many people use github open source software for all kinds of things, including autoclickers, aimbots, and even development utilities, which provides a huge pool of potential victims.</p>
+	    <h2>Pingshell's Killchain: Infection and Impact</h2>
+	    <p>Pingshell alone is just a blob of code that lets a computer recieve more code to run; however, when combined with known packing, social engineering, and post exploitation techniques it becomes much more potent. Below I have listed several techniques that can be combined with pingshell to help it either get onto a target machine, or expand its capabilities.</p>
 
 	    <table>
 		    <tr>
@@ -31,7 +31,7 @@
 		    </tr>
 		    <tr>
 			    <td>Extension Render Abuse</td>
-			    <td>In windows, similarly to github, it is possible to add white space after the name of a file, which can allow for some shenanigans with filetype. For example someone can name a file soemthing innocuous like "Video.mp4" and then put a bunch of "whitespace" afterwards to hide the original file extension.</td>
+			    <td>In windows, similarly to github, it is possible to add white space after the name of a file, which can allow for some shenanigans with filetype. For example someone can name a file soemthing innocuous like "Video.mp4" and then put a bunch of "whitespace" afterwards to hide the original file extension. Symptoms of this can be easier to spot, because the application icon will always show the true filetype(unless chained with other techniques like icon manipulation). </td>
 			    <td>Packing (hiding malware inside seemingly legitimate code)</td>
 		    </tr>
 		    <tr>
@@ -39,6 +39,15 @@
 			    <td>A polyglot is a valid program written in 2 languages at once. While this has many non-malicious applications, a polyglot can be written to have different results depending on how it is run. Giving the attacker a way of hiding malicous functionality inside a program that seems to be completely normal program, but it can in theory call itself in a different language to trigger the malicious functionality.</td>
 			    <td>Packing (hiding malware inside seemingly legitimate code)</td>
 		    </tr>
+		    <tr>
+			    <td>Icon Manipulation</td>
+			    <td>This is a common technique to give a .exe file for a game a different image.However, because you can make it anything you want, you can make it look like a different filetype. This can add to the believeability that the program is what it claims to be.  </td>
+			    <td>Packing (hiding malware inside seemingly legitimate code)</td>
+		    </tr>
+		    <tr>
+			    <td>Trusted Installer Abuse</td>
+			    <td><a href="https://www.tiraniddo.dev/2017/08/the-art-of-becoming-trustedinstaller.html">Tryranids Lair</a> This is a "feature" of windows that can be abused to escilate privelages even higher than administraitor. This was originally discovered in 2013 and has been absuable as recently as 8 months ago. This can be used to create new users, access any file, delete all of system32, or anything else your heart desires. </td>
+			    <td>Privelage escilation</td>
 
     </main>
 </body>
