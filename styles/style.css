@@ -1,3 +1,24 @@
+.navbar {
+  background-color: #fa96fa; 
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+
+}
+.nav-links {
+  list-style: none;
+  display: flex;             
+  gap: 2rem;                 
+}
+
+.contents {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 body {
         font-family: Arial, sans-serif;
         margin: 20px;
@@ -19,7 +40,7 @@ section {
         margin-bottom: 20px;
 }
 pre {
-        background: #fa96fa;
+        background: #bfa1d6;
         padding: 10px;
         border-radius: 5px;
         overflow-x: auto;
