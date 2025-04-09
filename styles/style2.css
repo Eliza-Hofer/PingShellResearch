@@ -1,3 +1,25 @@
+.navbar {
+  	background-color: #ff8afd; 
+  	color: black;
+  	padding: 1rem 2rem;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	position: sticky;
+
+}
+.nav-links {
+  	list-style: none;
+  	display: flex;             
+  	gap: 2rem;                 
+}
+
+.contents {
+    	display: flex;
+    	flex-flow: column wrap;
+}
+
+
 body {
         font-family: Arial, sans-serif;
 	background: #ad8bad;
