@@ -110,11 +110,12 @@ section {
 }
 
 pre {
-	background: #945a93;
-	padding: 10px;
-	border-radius: 5px;
-	overflow-x: auto;
+        background: #bfa1d6;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
 }
+
 
 code {
 	font-family: monospace;
